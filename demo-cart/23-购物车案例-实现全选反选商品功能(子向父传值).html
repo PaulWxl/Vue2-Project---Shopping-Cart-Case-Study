@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- 子向父传值，父组件中定义的@事件， 是在使用子组件的标签名中定义的！！！ -->
+    <!-- <Footer :isfull="fullState" @full-change="noChoose"></Footer> -->
+
+
+    <!-- <input type="checkbox" class="custom-control-input" id="cbFull" :checked="isfull" @change="fullChange" /> -->
+
+
+    <!-- 子组件: 定义@change="fullChange"
+    <input type="checkbox" class="custom-control-input" id="cbFull" :checked="isfull" @change="fullChange" /> -->
+
+
+    <!-- fullChange(e) {
+        this.$emit('full-change', e.target.checked) 
+    } -->
+</body>
+</html>

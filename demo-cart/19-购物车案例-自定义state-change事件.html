@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 子组件中： 
+
+
+    需要注意的是 checked有本来的事件change ， 所以 可以 直接 使用  @change=""
+
+
+    <input type="checkbox" class="custom-control-input" :id="'cb' + id" :checked="state" @change="stateChange" />
+        <label class="custom-control-label" :for="'cb' + id">
+
+
+    stateChange(e) {
+        // 使用事件的默认形参e 很重要， e.target.checked 可以 拿到 勾选状态的 方法
+        let newState = e.target.checked//e.target.checked 这句话非常关键！！！拿到最新的state 
+        this.$emit('state-change', {
+          id: this.id,
+          state: newState// 第二个参数 是一个 对象， 传一个对象 给 父组件 //newState 赋值给 state
+        })
+      } -->
+
+
+      <!-- 在 父组件 （App.vue） 中，
+      <Goods @state-change="getNewState"></Goods>
+      
+      methods 中 定义 getNewState: 
+
+      getNewState(e) {
+        let id = e.id
+        let state = e.state 
+        this.list[id-1].goods_state = state  
+      } -->
+
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 实现 按钮 增加/减少 商品 数量 的 功能
+    
+        按钮 的 增加/减少 商品 的 数量 只是 在 Counter
+        组件 中 更改了！ 
+        
+        分析： 最主要的目的 是 让 App 组件 中 的list 数组 里 的 每一项 的 数量 更改。 
+        所以 应该 是 Counter 组件 向 App 组件 传值。 他们属于 兄弟组件， 用 eventBus.js 传值。发送方 用 bus.$emit(), 接收方 在created中 用 bus.$on() 
+        
+        
+
+        还需要 指定 对应 的 商品。 所以 Counter 组件 还需要 向 App 组件 发送 商品 的 id。：-- 因为 Counter 组件 中 没有 id ， 先 自定义一个 id 属性， 通过 Goods 组件 传过来 。 
+    -->
+</body>
+</html>

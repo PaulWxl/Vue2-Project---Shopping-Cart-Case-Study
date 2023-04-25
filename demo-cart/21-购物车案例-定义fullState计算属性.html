@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 计算属性的应用场景: 
+
+        一个数据的动态变化，希望得到另一个数据的动态变化， 一个数据的结果， 依赖于 其他数据的变化， 来 动态的计算。 需要注意的是， 定义时， 需要 被 定义成方法。 
+
+
+        // 定义一个计算属性, 动态计算出  一个 布尔值 属性 ， 根据 每一项 商品 的 checked ， 动态 得到 一个 布尔值， 然后 这个 布尔值 赋值 给 Footer组件 中 的 checked 使用。 
+    computed: {
+      // 动态计算出 全选 的 状态 是 true 还是 false， 定义一个 方法， fullState()
+      // 计算属性 在定义的时候 必须 定义成方法， 使用的时候 当成 普通属性 使用
+      fullState() {
+        return  this.list.every( item => {
+          return item.goods_state == true //一定要记得 every 的 判断条件 前 要加 return 
+        } )
+      } 
+    } -->
+
+
+
+
+        <!-- 父向子传值 ， isfull 是 Footer 中 自定义的 属性 。 把计算属性的 值 赋值 给 isfull。
+        <Footer :isfull="fullState"></Footer> -->
+
+</body>
+</html>
